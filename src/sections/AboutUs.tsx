@@ -39,7 +39,7 @@ const AboutUs = () => {
           <div>
             <img 
               src="https://images.pexels.com/photos/8112799/pexels-photo-8112799.jpeg" 
-              alt="Equipo de Elite Hoops" 
+              alt="Equipo de Best Baller Agency" 
               className="rounded-lg shadow-xl w-full"
             />
           </div>

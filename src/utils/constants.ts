@@ -1,4 +1,4 @@
-export const COMPANY_NAME = 'ELITE HOOPS';
+export const COMPANY_NAME = 'BEST BALLER AGENCY';
 export const COMPANY_DESCRIPTION = 'Agencia internacional de representación de jugadores y entrenadores profesionales de baloncesto';
 export const COMPANY_SLOGAN = 'REPRESENTAMOS TALENTO. IMPULSAMOS TU CARRERA AL SIGUIENTE NIVEL.';
 

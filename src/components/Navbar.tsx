@@ -22,7 +22,7 @@ const Navbar = ({ scrolled }: NavbarProps) => {
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0">
             <a href="#" className="flex items-center">
-              <span className="text-white font-bold text-xl">ELITE HOOPS</span>
+              <span className="text-white font-bold text-xl">BEST BALLER AGENCY</span>
             </a>
           </div>
           

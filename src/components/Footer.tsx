@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo & About */}
           <div>
-            <h2 className="text-xl font-bold mb-4">ELITE HOOPS</h2>
+            <h2 className="text-xl font-bold mb-4">BEST BALLER AGENCY</h2>
             <p className="text-gray-300 mb-4">
               Agencia internacional de representación de jugadores y entrenadores profesionales de baloncesto.
             </p>
@@ -99,7 +99,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-700 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} ELITE HOOPS. Todos los derechos reservados.
+            &copy; {new Date().getFullYear()} BEST BALLER AGENCY. Todos los derechos reservados.
           </p>
           <div className="flex space-x-6">
             <a href="#" className="text-gray-400 hover:text-white text-sm">
