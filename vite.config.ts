@@ -1,26 +1,9 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import ViteImageOptimizer from 'vite-plugin-image-optimizer';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), ViteImageOptimizer({
-    compress: {
-      jpeg: {
-        quality: 75,
-      },
-      png: {
-        quality: 75,
-      },
-    },
-    webp: {
-      quality: 75,
-    },
-  })],
-  optimizeDeps: {
-    exclude: ['lucide-react'],
-    include: ['react', 'react-dom'],
-  },
+  plugins: [react()],
   build: {
     minify: 'terser',
     terserOptions: {
@@ -38,10 +21,5 @@ export default defineConfig({
         }
       }
     }
-  },
-  performance: {
-    hints: 'warning',
-    maxAssetSize: 500 * 1024,
-    maxEntrypointSize: 500 * 1024
   }
 });
