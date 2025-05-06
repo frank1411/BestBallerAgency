@@ -31,7 +31,7 @@ const Contact = () => {
                   <h4 className="font-bold text-navy mb-1">Dirección</h4>
                   <p className="text-gray-600">
                     Av. Principal 123, Ciudad Deportiva<br />
-                    28001 Madrid, España
+                    28001 Caracas, Venezuela
                   </p>
                 </div>
               </div>
@@ -56,8 +56,8 @@ const Contact = () => {
                 <div>
                   <h4 className="font-bold text-navy mb-1">Teléfono</h4>
                   <p className="text-gray-600">
-                    +34 123 456 789<br />
-                    +34 987 654 321
+                    +58 123 456 789<br />
+                    +58 987 654 321
                   </p>
                 </div>
               </div>

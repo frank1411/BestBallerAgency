@@ -11,9 +11,9 @@ export const NAV_LINKS = [
 ];
 
 export const CONTACT_INFO = {
-  address: 'Av. Principal 123, Ciudad Deportiva, 28001 Madrid, España',
-  email: 'info@elitehoops.com',
-  phone: '+34 123 456 789',
+  address: 'Av. Principal 123, Ciudad Deportiva, 28001 Caracas, Venezuela',
+  email: 'info@bestballeragency.com',
+  phone: '+58 123 456 789',
   hours: 'Lunes a Viernes: 9:00 - 18:00'
 };
 

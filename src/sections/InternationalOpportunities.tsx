@@ -6,7 +6,7 @@ const InternationalOpportunities = () => {
   const leagues = [
     { name: "NBA", country: "Estados Unidos", flag: "🇺🇸" },
     { name: "Euroliga", country: "Europa", flag: "🇪🇺" },
-    { name: "ACB", country: "España", flag: "🇪🇸" },
+    { name: "ACB", country: "Venezuela", flag: "🇪🇸" },
     { name: "LNB Pro A", country: "Francia", flag: "🇫🇷" },
     { name: "Lega Basket", country: "Italia", flag: "🇮🇹" },
     { name: "VTB United", country: "Rusia", flag: "🇷🇺" },

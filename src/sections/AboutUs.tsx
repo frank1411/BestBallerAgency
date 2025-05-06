@@ -32,7 +32,7 @@ const AboutUs = () => {
                 "Cada deportista es único. Nuestro trabajo es identificar ese valor diferencial 
                 y convertirlo en oportunidades reales de crecimiento profesional."
               </p>
-              <p className="text-navy font-bold mt-2">— Marco Rodríguez, Fundador</p>
+              <p className="text-navy font-bold mt-2">— Castor Besteiro, Fundador</p>
             </div>
           </div>
           
