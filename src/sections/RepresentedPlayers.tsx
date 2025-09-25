@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { PlayerCard } from '../components/PlayerCard';
-import { Button } from '../components/ui/Button';
+import Button from '../components/Button';
 import { ArrowRight } from 'lucide-react';
 
 // Definir interfaz de Player
