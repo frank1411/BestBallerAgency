@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MenuIcon, X } from 'lucide-react';
+import { Menu as MenuIcon, X } from 'lucide-react';
 
 interface NavbarProps {
   scrolled: boolean;
