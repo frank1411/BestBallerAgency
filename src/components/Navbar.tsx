@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Menu as MenuIcon, X } from 'lucide-react';
+import logo from '../assets/LogoBestBallerAgency.png';
 
 interface NavbarProps {
   scrolled: boolean;
@@ -23,7 +24,7 @@ const Navbar = ({ scrolled }: NavbarProps) => {
           <div className="flex-shrink-0">
             <a href="#" className="flex items-center">
               <img 
-                src="/src/imagenes/LOGO BEST BALLER AGENCY.png" 
+                src={logo} 
                 alt="Best Baller Agency" 
                 className="h-16 w-auto mr-4"
               />
