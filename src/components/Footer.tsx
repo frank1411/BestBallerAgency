@@ -7,7 +7,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo & About */}
           <div>
-            <h2 className="text-xl font-bold mb-4">BEST BALLER AGENCY</h2>
+            <div className="flex items-center mb-4">
+              <img 
+                src="/src/imagenes/LOGO BEST BALLER AGENCY.png" 
+                alt="Best Baller Agency" 
+                className="h-10 w-auto mr-3"
+              />
+              <h2 className="text-xl font-bold">BEST BALLER AGENCY</h2>
+            </div>
             <p className="text-gray-300 mb-4">
               Agencia internacional de representación de jugadores y entrenadores profesionales de baloncesto.
             </p>
