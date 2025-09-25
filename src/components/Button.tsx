@@ -3,11 +3,12 @@ import React from 'react';
 type ButtonVariant = 'primary' | 'secondary' | 'outline';
 type ButtonSize = 'sm' | 'md' | 'lg';
 
-interface ButtonProps {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
   variant?: ButtonVariant;
   size?: ButtonSize;
   className?: string;
+  href?: string;
   onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
@@ -18,11 +19,12 @@ const Button = ({
   variant = 'primary',
   size = 'md',
   className = '',
+  href,
   onClick,
   type = 'button',
-  disabled = false
+  disabled = false,
+  ...props
 }: ButtonProps) => {
-  
   const baseClasses = 'font-semibold rounded-md transition-all duration-200 inline-flex items-center justify-center';
   
   const variantClasses = {
@@ -32,23 +34,35 @@ const Button = ({
   };
   
   const sizeClasses = {
-    sm: 'text-sm px-3 py-1.5',
-    md: 'text-base px-5 py-2',
-    lg: 'text-lg px-6 py-3'
+    sm: 'px-3 py-1.5 text-sm',
+    md: 'px-4 py-2 text-base',
+    lg: 'px-6 py-3 text-lg'
   };
-  
-  const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer';
-  
+
+  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className} ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}`;
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        className={`${classes} inline-block`}
+        onClick={onClick}
+      >
+        {children}
+      </a>
+    );
+  }
+
   return (
     <button
       type={type}
-      className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`}
+      className={classes}
       onClick={onClick}
       disabled={disabled}
+      {...props}
     >
       {children}
     </button>
   );
 };
-
 export default Button;

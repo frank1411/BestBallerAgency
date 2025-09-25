@@ -30,10 +30,15 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <Button size="lg">
+            <Button size="lg" href="#postulate">
               SOLICITA REPRESENTACIÓN
             </Button>
-            <Button variant="outline" size="lg" className="text-black border-white hover:bg-black hover:text-white">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="text-black border-white hover:bg-black hover:text-white"
+              href="#representados"
+            >
               CONOCE NUESTROS JUGADORES
             </Button>
           </div>
