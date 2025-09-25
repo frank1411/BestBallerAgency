@@ -33,7 +33,7 @@ const Hero = () => {
             <Button size="lg">
               SOLICITA REPRESENTACIÓN
             </Button>
-            <Button variant="outline" size="lg" className="text-white border-white hover:bg-white hover:text-navy">
+            <Button variant="outline" size="lg" className="text-black border-white hover:bg-black hover:text-white">
               CONOCE NUESTROS JUGADORES
             </Button>
           </div>
