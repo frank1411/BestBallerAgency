@@ -1,18 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { PlayerCard } from '../components/PlayerCard';
+import { PlayerCard, Player } from '../components/PlayerCard';
 import Button from '../components/Button';
 import { ArrowRight } from 'lucide-react';
 
-// Definir interfaz de Player
-interface Player {
-  id: string;
-  name: string;
-  position: string;
-  team: string;
-  imageUrl?: string;
-  type?: 'player' | 'coach';
-  featured?: boolean;
-}
 
 const RepresentedPlayers: React.FC = () => {
   // Estados para manejar jugadores
