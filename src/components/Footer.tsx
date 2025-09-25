@@ -11,9 +11,12 @@ const Footer = () => {
               <img 
                 src="/src/imagenes/LOGO BEST BALLER AGENCY.png" 
                 alt="Best Baller Agency" 
-                className="h-10 w-auto mr-3"
+                className="h-14 w-auto mr-4"
               />
-              <h2 className="text-xl font-bold">BEST BALLER AGENCY</h2>
+              <div>
+                <h2 className="text-xl font-bold text-white">BEST BALLER AGENCY</h2>
+                <p className="text-sm text-gray-300">SPORT MANAGEMENT</p>
+              </div>
             </div>
             <p className="text-gray-300 mb-4">
               Agencia internacional de representación de jugadores y entrenadores profesionales de baloncesto.

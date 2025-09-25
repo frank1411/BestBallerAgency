@@ -39,7 +39,7 @@ const Services = () => {
     <section id="servicios" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">NUESTROS SERVICIOS</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">NUESTROS SERVICIOS</h2>
           <div className="w-20 h-1 bg-orange-500 mx-auto mb-6"></div>
           <p className="text-gray-600 text-lg">
             Ofrecemos un acompañamiento integral para que te enfoques en lo que mejor sabes hacer: jugar al baloncesto.
@@ -58,6 +58,7 @@ const Services = () => {
         </div>
         
         <div className="mt-20 bg-navy rounded-lg overflow-hidden shadow-xl">
+        <div className="mt-20 bg-black rounded-lg overflow-hidden shadow-xl">
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="p-8 md:p-12">
               <h3 className="text-2xl font-bold text-white mb-4">

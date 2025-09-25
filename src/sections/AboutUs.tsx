@@ -3,7 +3,7 @@ const AboutUs = () => {
     <section id="quienes-somos" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">QUIÉNES SOMOS</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">QUIÉNES SOMOS</h2>
           <div className="w-20 h-1 bg-orange-500 mx-auto mb-6"></div>
           <p className="text-gray-600 text-lg">
             Comprometidos con el éxito y desarrollo profesional de los mejores talentos del baloncesto.
@@ -12,7 +12,7 @@ const AboutUs = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h3 className="text-2xl font-bold text-navy mb-4">
+            <h3 className="text-2xl font-bold text-black mb-4">
               Agencia internacional de representación con resultados probados
             </h3>
             

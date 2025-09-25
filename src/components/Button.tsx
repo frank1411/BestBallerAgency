@@ -26,9 +26,9 @@ const Button = ({
   const baseClasses = 'font-semibold rounded-md transition-all duration-200 inline-flex items-center justify-center';
   
   const variantClasses = {
-    primary: 'bg-orange-500 text-white hover:bg-orange-600 active:bg-orange-700',
+    primary: 'bg-orange-500 text-white hover:bg-orange-600 active:bg-orange-700 shadow-lg',
     secondary: 'bg-blue-500 text-white hover:bg-blue-600 active:bg-blue-700',
-    outline: 'bg-transparent text-navy border-2 border-navy hover:bg-navy hover:text-white active:bg-navy-dark'
+    outline: 'bg-transparent text-black border-2 border-black hover:bg-black hover:text-white active:bg-gray-800'
   };
   
   const sizeClasses = {

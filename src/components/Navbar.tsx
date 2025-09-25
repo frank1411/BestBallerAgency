@@ -25,8 +25,11 @@ const Navbar = ({ scrolled }: NavbarProps) => {
               <img 
                 src="/src/imagenes/LOGO BEST BALLER AGENCY.png" 
                 alt="Best Baller Agency" 
-                className="h-12 w-auto"
+                className="h-16 w-auto mr-4"
               />
+              <span className="text-white font-bold text-xl hidden sm:block">
+                BEST BALLER AGENCY
+              </span>
             </a>
           </div>
           

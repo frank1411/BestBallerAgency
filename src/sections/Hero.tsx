@@ -5,7 +5,7 @@ const Hero = () => {
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-navy bg-opacity-70"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-75"></div>
         <img
           src="https://images.pexels.com/photos/2834917/pexels-photo-2834917.jpeg"
           alt="Basketball player in action"
