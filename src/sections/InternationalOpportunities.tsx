@@ -1,4 +1,4 @@
-import { Globe, MapPin } from 'lucide-react';
+import { Globe } from 'lucide-react';
 import Button from '../components/Button';
 
 const InternationalOpportunities = () => {
@@ -79,25 +79,6 @@ const InternationalOpportunities = () => {
                   </div>
                 ))}
               </div>
-            </div>
-          </div>
-        </div>
-        
-        <div className="bg-navy rounded-lg overflow-hidden">
-          <div className="p-8 text-center text-white">
-            <h3 className="text-2xl font-bold mb-4">Descubre dónde puede llevarte tu talento</h3>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Nuestro equipo de scouts y agentes está constantemente evaluando oportunidades internacionales adaptadas a tu perfil, nivel y objetivos profesionales.
-            </p>
-            <Button>
-              <MapPin size={18} className="mr-2" />
-              Ver Mapa de Oportunidades
-            </Button>
-          </div>
-          <div className="h-96 bg-gray-200">
-            {/* World map would go here - using placeholder for now */}
-            <div className="h-full flex items-center justify-center bg-blue-900 bg-opacity-20">
-              <p className="text-navy font-medium">Mapa interactivo de oportunidades globales</p>
             </div>
           </div>
         </div>

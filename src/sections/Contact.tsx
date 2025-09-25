@@ -101,12 +101,6 @@ const Contact = () => {
           </div>
         </div>
         
-        <div className="mt-20 h-96 bg-gray-200 rounded-lg overflow-hidden">
-          {/* Map would go here - using placeholder for now */}
-          <div className="h-full flex items-center justify-center bg-gray-300">
-            <p className="text-gray-600 font-medium">Mapa con la ubicación de nuestras oficinas</p>
-          </div>
-        </div>
       </div>
     </section>
   );
