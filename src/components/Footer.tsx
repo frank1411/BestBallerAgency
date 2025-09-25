@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin, Instagram, Twitter, Youtube } from 'lucide-react';
+import logo from '../assets/LogoBestBallerAgency.png';
 
 const Footer = () => {
   return (
@@ -9,7 +10,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center mb-4">
               <img 
-                src="/src/imagenes/LOGO BEST BALLER AGENCY.png" 
+                src={logo} 
                 alt="Best Baller Agency" 
                 className="h-14 w-auto mr-4"
               />
