@@ -1,7 +1,28 @@
 import { Search, UserPlus, FileCheck, CheckCircle } from 'lucide-react';
 import Button from '../components/Button';
+import { useEffect } from 'react';
 
 const Scouting = () => {
+  // Efecto para manejar el desplazamiento al cargar la página con el hash
+  useEffect(() => {
+    const handleHashChange = () => {
+      if (window.location.hash === '#formulario-aplicacion') {
+        const element = document.getElementById('formulario-aplicacion');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    };
+
+    // Manejar el hash inicial
+    handleHashChange();
+
+    // Manejar cambios en el hash
+    window.addEventListener('hashchange', handleHashChange);
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, []);
   return (
     <section id="postulate" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

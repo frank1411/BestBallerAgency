@@ -2,9 +2,12 @@ import { useState } from 'react';
 import { Menu as MenuIcon, X } from 'lucide-react';
 import logo from '../assets/LogoBestBallerAgency.png';
 
-// Función para desplazamiento suave
-const smoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+// Función para manejar la navegación
+const handleNavigation = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
   e.preventDefault();
+  // Actualizar la URL con el hash
+  window.location.hash = targetId;
+  // Forzar el scroll al elemento
   const element = document.getElementById(targetId);
   if (element) {
     element.scrollIntoView({ behavior: 'smooth' });
@@ -56,7 +59,7 @@ const Navbar = ({ scrolled }: NavbarProps) => {
             </a>
             <a 
               href="#formulario-aplicacion"
-              onClick={(e) => smoothScroll(e, 'formulario-aplicacion')}
+              onClick={(e) => handleNavigation(e, 'formulario-aplicacion')}
               className="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 transition-colors"
             >
               POSTÚLATE
@@ -111,7 +114,7 @@ const Navbar = ({ scrolled }: NavbarProps) => {
               href="#formulario-aplicacion"
               className="block px-3 py-2 bg-orange-500 text-white rounded-md text-center"
               onClick={(e) => {
-                smoothScroll(e, 'formulario-aplicacion');
+                handleNavigation(e, 'formulario-aplicacion');
                 toggleMobileMenu();
               }}
             >
