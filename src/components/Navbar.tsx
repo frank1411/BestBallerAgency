@@ -2,6 +2,15 @@ import { useState } from 'react';
 import { Menu as MenuIcon, X } from 'lucide-react';
 import logo from '../assets/LogoBestBallerAgency.png';
 
+// Función para desplazamiento suave
+const smoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+  e.preventDefault();
+  const element = document.getElementById(targetId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
 interface NavbarProps {
   scrolled: boolean;
 }
@@ -43,13 +52,11 @@ const Navbar = ({ scrolled }: NavbarProps) => {
               REPRESENTADOS
             </a>
             <a href="#servicios" className="text-white hover:text-orange-500 transition-colors">
-              SERVICIOS
-            </a>
-            <a href="#oportunidades" className="text-white hover:text-orange-500 transition-colors">
               OPORTUNIDADES INTERNACIONALES
             </a>
-            <a
+            <a 
               href="#formulario-aplicacion"
+              onClick={(e) => smoothScroll(e, 'formulario-aplicacion')}
               className="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 transition-colors"
             >
               POSTÚLATE
@@ -101,9 +108,12 @@ const Navbar = ({ scrolled }: NavbarProps) => {
               OPORTUNIDADES INTERNACIONALES
             </a>
             <a
-              href="#postulate"
-              className="block px-3 py-2 bg-orange-500 text-white rounded-md"
-              onClick={toggleMobileMenu}
+              href="#formulario-aplicacion"
+              className="block px-3 py-2 bg-orange-500 text-white rounded-md text-center"
+              onClick={(e) => {
+                smoothScroll(e, 'formulario-aplicacion');
+                toggleMobileMenu();
+              }}
             >
               POSTÚLATE
             </a>
