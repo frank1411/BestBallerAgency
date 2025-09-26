@@ -30,10 +30,32 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <Button size="lg">
-              SOLICITA REPRESENTACIÓN
-            </Button>
-            <a href="#nuestros-representados" className="inline-block">
+            <a 
+              href="#formulario-aplicacion" 
+              onClick={(e) => {
+                e.preventDefault();
+                const element = document.getElementById('formulario-aplicacion');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="inline-block"
+            >
+              <Button size="lg">
+                SOLICITA REPRESENTACIÓN
+              </Button>
+            </a>
+            <a 
+              href="#nuestros-representados" 
+              onClick={(e) => {
+                e.preventDefault();
+                const element = document.getElementById('nuestros-representados');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="inline-block"
+            >
               <Button variant="outline" size="lg" className="text-black border-white hover:bg-black hover:text-white">
                 CONOCE NUESTROS JUGADORES
               </Button>
