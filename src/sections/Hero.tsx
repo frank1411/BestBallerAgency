@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black bg-opacity-75"></div>
         <img
-          src="https://images.pexels.com/photos/2834917/pexels-photo-2834917.jpeg"
+          src="https://images.unsplash.com/photo-1543351611-58f69d7c1781?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
           alt="Basketball player in action"
           className="w-full h-full object-cover"
         />

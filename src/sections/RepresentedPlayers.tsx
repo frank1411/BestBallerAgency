@@ -23,7 +23,7 @@ const RepresentedPlayers: React.FC = () => {
       position: 'Base',
       team: 'Trotamundos de Carabobo',
       type: 'player',
-      imageUrl: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+      imageUrl: 'https://images.unsplash.com/photo-1600189261869-3336cbe984f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
       featured: true
     },
     {
@@ -32,16 +32,7 @@ const RepresentedPlayers: React.FC = () => {
       position: 'Escolta',
       team: 'Cocodrilos de Caracas',
       type: 'player',
-      imageUrl: 'https://images.unsplash.com/photo-1543351611-58f69d7c1781?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
-      featured: true
-    },
-    {
-      id: '3',
-      name: 'Miguel González',
-      position: 'Alero',
-      team: 'Guaros de Lara',
-      type: 'player',
-      imageUrl: 'https://images.unsplash.com/photo-1574629810360-7efbbe195d86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+      imageUrl: 'https://images.unsplash.com/photo-1585504256913-7f2601739ee2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
       featured: true
     },
     {
@@ -50,25 +41,34 @@ const RepresentedPlayers: React.FC = () => {
       position: 'Ala-Pívot',
       team: 'Spartans Distrito Capital',
       type: 'player',
-      imageUrl: 'https://images.unsplash.com/photo-1577471488278-16eec37ffcc2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+      imageUrl: 'https://images.unsplash.com/photo-1543351611-58f69d7c1781?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1500&q=80',
       featured: true
     },
     {
       id: '5',
-      name: 'Luis Sánchez',
+      name: 'Luis Hernández',
       position: 'Pívot',
-      team: 'Marinos de Anzoátegui',
+      team: 'Bucaneros de La Guaira',
       type: 'player',
-      imageUrl: 'https://images.unsplash.com/photo-1577471488278-16eec37ffcc2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+      imageUrl: 'https://images.unsplash.com/photo-1542643423-5e3a3f4c9148?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1500&q=80',
       featured: true
     },
     {
       id: '6',
-      name: 'Roberto Fernández',
+      name: 'Jorge Rivas',
+      position: 'Base',
+      team: 'Gigantes de Guayana',
+      type: 'player',
+      imageUrl: 'https://images.unsplash.com/photo-1600189261869-3336cbe984f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1500&q=80',
+      featured: true
+    },
+    {
+      id: '7',
+      name: 'Carlos Mendoza',
       position: 'Entrenador',
       team: 'Selección Nacional',
       type: 'coach',
-      imageUrl: 'https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+      imageUrl: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f724?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1500&q=80',
       featured: true
     }
   ];
