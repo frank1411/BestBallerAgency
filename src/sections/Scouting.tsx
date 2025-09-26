@@ -66,7 +66,7 @@ const Scouting = () => {
         </div>
         
         {/* Application Form */}
-        <div className="bg-gray-50 rounded-lg p-8 max-w-4xl mx-auto">
+        <div id="formulario-aplicacion" className="bg-gray-50 rounded-lg p-8 max-w-4xl mx-auto">
           <h3 className="text-2xl font-bold text-navy mb-6 text-center">Formulario de Aplicación</h3>
           
           <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
