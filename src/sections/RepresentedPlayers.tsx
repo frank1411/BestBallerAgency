@@ -92,7 +92,7 @@ const RepresentedPlayers: React.FC = () => {
   };
 
   return (
-    <section className="represented-players-section container mx-auto px-4 py-16">
+    <section id="nuestros-representados" className="represented-players-section container mx-auto px-4 py-16">
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold mb-4">Nuestros Representados</h2>
         <p className="text-gray-600">Profesionales de élite en el mundo del deporte</p>
