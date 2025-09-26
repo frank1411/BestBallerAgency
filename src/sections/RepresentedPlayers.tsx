@@ -75,7 +75,7 @@ const RepresentedPlayers: React.FC = () => {
 
   // Estados de filtrado
   const [filter, setFilter] = useState<'all' | 'player' | 'coach'>('all');
-  const [visibleCount, setVisibleCount] = useState(6);
+  const [visibleCount, setVisibleCount] = useState(3); // Mostrar 3 tarjetas inicialmente
 
   // Filtrar jugadores
   const filteredPlayers = players.filter(player => {
@@ -142,10 +142,11 @@ const RepresentedPlayers: React.FC = () => {
       </div>
 
       {/* Show More Button */}
-      {visibleCount < filteredPlayers.length && (
+      {filteredPlayers.length > 3 && visibleCount < filteredPlayers.length && (
         <div className="text-center mt-12">
           <Button
             onClick={handleShowMore}
+            className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-md transition-colors"
           >
             Ver más representados
             <ArrowRight size={16} className="ml-2" />
