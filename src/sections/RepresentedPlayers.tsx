@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import PlayerCard from '../components/PlayerCard';
 import Button from '../components/Button';
 import { ArrowRight } from 'lucide-react';
@@ -15,24 +15,16 @@ interface Player {
 }
 
 const RepresentedPlayers: React.FC = () => {
-  // Estados para manejar jugadores
-  const [players, setPlayers] = useState<Player[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  // Estados de filtrado
-  const [filter, setFilter] = useState<'all' | 'player' | 'coach'>('all');
-  const [visibleCount, setVisibleCount] = useState(6);
-
-  // Datos de ejemplo para cuando la API falle
-  const examplePlayers: Player[] = [
+  // Datos estáticos de jugadores
+  const players: Player[] = [
     {
       id: '1',
       name: 'Juan Pérez',
       position: 'Base',
       team: 'Trotamundos de Carabobo',
       type: 'player',
-      imageUrl: 'https://via.placeholder.com/300x400?text=Juan+Pérez'
+      imageUrl: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+      featured: true
     },
     {
       id: '2',
@@ -40,7 +32,8 @@ const RepresentedPlayers: React.FC = () => {
       position: 'Escolta',
       team: 'Cocodrilos de Caracas',
       type: 'player',
-      imageUrl: 'https://via.placeholder.com/300x400?text=Carlos+Rodríguez'
+      imageUrl: 'https://images.unsplash.com/photo-1543351611-58f69d7c1781?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+      featured: true
     },
     {
       id: '3',
@@ -48,7 +41,8 @@ const RepresentedPlayers: React.FC = () => {
       position: 'Alero',
       team: 'Guaros de Lara',
       type: 'player',
-      imageUrl: 'https://via.placeholder.com/300x400?text=Miguel+González'
+      imageUrl: 'https://images.unsplash.com/photo-1574629810360-7efbbe195d86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+      featured: true
     },
     {
       id: '4',
@@ -56,7 +50,8 @@ const RepresentedPlayers: React.FC = () => {
       position: 'Ala-Pívot',
       team: 'Spartans Distrito Capital',
       type: 'player',
-      imageUrl: 'https://via.placeholder.com/300x400?text=Pedro+Martínez'
+      imageUrl: 'https://images.unsplash.com/photo-1577471488278-16eec37ffcc2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+      featured: true
     },
     {
       id: '5',
@@ -64,7 +59,8 @@ const RepresentedPlayers: React.FC = () => {
       position: 'Pívot',
       team: 'Marinos de Anzoátegui',
       type: 'player',
-      imageUrl: 'https://via.placeholder.com/300x400?text=Luis+Sánchez'
+      imageUrl: 'https://images.unsplash.com/photo-1577471488278-16eec37ffcc2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+      featured: true
     },
     {
       id: '6',
@@ -72,58 +68,14 @@ const RepresentedPlayers: React.FC = () => {
       position: 'Entrenador',
       team: 'Selección Nacional',
       type: 'coach',
-      imageUrl: 'https://via.placeholder.com/300x400?text=Roberto+Fernández'
+      imageUrl: 'https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+      featured: true
     }
   ];
 
-  // Efecto para cargar jugadores
-  useEffect(() => {
-    const apiEndpoints = [
-      'https://ohks3g46lg.execute-api.us-east-1.amazonaws.com/prod/players',
-      'https://pj0im8sjn1.execute-api.us-east-1.amazonaws.com/prod/players'
-    ];
-
-    const fetchPlayers = async () => {
-      let apiSuccess = false;
-      
-      for (const endpoint of apiEndpoints) {
-        try {
-          console.log(`Intentando conectar a: ${endpoint}`);
-          const response = await fetch(endpoint);
-          
-          if (!response.ok) {
-            console.warn(`Error en la respuesta de ${endpoint}: ${response.status}`);
-            continue;
-          }
-
-          const data: Player[] = await response.json();
-          
-          if (data && Array.isArray(data) && data.length > 0) {
-            console.log(`Datos obtenidos correctamente de ${endpoint}`, data);
-            setPlayers(data);
-            setLoading(false);
-            apiSuccess = true;
-            return;
-          } else {
-            console.warn(`Datos vacíos o inválidos de ${endpoint}`);
-          }
-        } catch (err) {
-          console.warn(`Error al conectar con ${endpoint}:`, err);
-        }
-      }
-
-      // Si ningún endpoint funciona, usar datos de ejemplo
-      if (!apiSuccess) {
-        console.log('Usando datos de ejemplo debido a fallos en las APIs');
-        setPlayers(examplePlayers);
-        setError('Mostrando datos de ejemplo. No se pudo conectar con el servidor.');
-      }
-      
-      setLoading(false);
-    };
-
-    fetchPlayers();
-  }, []);
+  // Estados de filtrado
+  const [filter, setFilter] = useState<'all' | 'player' | 'coach'>('all');
+  const [visibleCount, setVisibleCount] = useState(6);
 
   // Filtrar jugadores
   const filteredPlayers = players.filter(player => {
@@ -138,37 +90,6 @@ const RepresentedPlayers: React.FC = () => {
   const handleShowMore = () => {
     setVisibleCount(prev => prev + 6);
   };
-
-  // Estados de carga y error
-  if (loading) {
-    return (
-      <div className="text-center py-12">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-orange-500 mx-auto mb-4"></div>
-        <p>Cargando jugadores...</p>
-      </div>
-    );
-  }
-  
-  if (error) {
-    return (
-      <div className="text-center py-8">
-        <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-4">
-          <div className="flex">
-            <div className="flex-shrink-0">
-              <svg className="h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
-              </svg>
-            </div>
-            <div className="ml-3">
-              <p className="text-sm text-yellow-700">
-                {error}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <section className="represented-players-section container mx-auto px-4 py-16">
