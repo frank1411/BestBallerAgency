@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { PlayerCard } from '../components/PlayerCard';
+import PlayerCard from '../components/PlayerCard';
 import Button from '../components/Button';
 import { ArrowRight } from 'lucide-react';
 
