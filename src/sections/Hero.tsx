@@ -30,17 +30,14 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <Button size="lg" href="#postulate">
+            <Button size="lg">
               SOLICITA REPRESENTACIÓN
             </Button>
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="text-black border-white hover:bg-black hover:text-white"
-              href="#representados"
-            >
-              CONOCE NUESTROS JUGADORES
-            </Button>
+            <a href="#representados" className="inline-block">
+              <Button variant="outline" size="lg" className="text-black border-white hover:bg-black hover:text-white">
+                CONOCE NUESTROS JUGADORES
+              </Button>
+            </a>
           </div>
         </div>
       </div>
